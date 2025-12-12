@@ -1,4 +1,4 @@
-:root{
+ :root{
     --bg1: #daf2ff;
     --bg2: #f7f7ff;
     --pink: #ff4d91;
@@ -18,6 +18,8 @@
     overflow:hidden;
     position:relative;
   }
+
+  /* Sol feliz */
   .sun{
     position:fixed;
     top:8%;
@@ -49,6 +51,8 @@
     0%, 100%{ transform: scale(1); }
     50%{ transform: scale(1.08); }
   }
+
+  /* Nubes */
   .cloud{
     position:fixed;
     background: white;
@@ -146,6 +150,315 @@
     100%{ transform: translateX(calc(100vw + 200px)); }
   }
 
+  /* Jardín en la parte inferior */
+  .garden{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(180deg, #7bc97f 0%, #5a9e5e 100%);
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .grass-blade{
+    position: absolute;
+    bottom: 0;
+    width: 4px;
+    background: #4a7c4e;
+    border-radius: 50% 50% 0 0;
+    animation: grassSway 2s ease-in-out infinite;
+  }
+
+  @keyframes grassSway{
+    0%, 100%{ transform: rotate(-2deg); }
+    50%{ transform: rotate(2deg); }
+  }
+
+  .stick-person{
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .stick-person.boy{
+    left: 35%;
+  }
+
+  .stick-person.girl{
+    left: 45%;
+  }
+
+  .stick-head{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ffd1b3;
+    border: 2px solid #8b4513;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .stick-body{
+    width: 2px;
+    height: 30px;
+    background: #8b4513;
+    margin: 0 auto;
+  }
+
+  .stick-arms{
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .stick-arm{
+    width: 20px;
+    height: 2px;
+    background: #8b4513;
+    position: absolute;
+  }
+
+  .stick-arm.left{
+    transform: rotate(-45deg);
+    right: 1px;
+  }
+
+  .stick-arm.right{
+    transform: rotate(45deg);
+    left: 1px;
+  }
+
+  .stick-legs{
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .stick-leg{
+    width: 20px;
+    height: 2px;
+    background: #8b4513;
+    position: absolute;
+  }
+
+  .stick-leg.left{
+    transform: rotate(30deg);
+    right: 1px;
+  }
+
+  .stick-leg.right{
+    transform: rotate(-30deg);
+    left: 1px;
+  }
+
+  /* Flor en la mano del chico */
+  .flower-hand{
+    position: absolute;
+    top: 10px;
+    left: -25px;
+    font-size: 20px;
+    animation: flowerBounce 2s ease-in-out infinite;
+  }
+
+  @keyframes flowerBounce{
+    0%, 100%{ transform: translateY(0) rotate(-10deg); }
+    50%{ transform: translateY(-5px) rotate(-15deg); }
+  }
+
+  /* Cabello */
+  .hair{
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hair.boy-hair{
+    width: 25px;
+    height: 10px;
+    background: #271f1a;
+    border-radius: 50% 50% 0 0;
+  }
+
+  .hair.girl-hair{
+    width: 30px;
+    height: 20px;
+    background: #2c1810;
+    border-radius: 50% 50% 20% 20%;
+  }
+  .hair.girl-hair::before{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 30px;
+    background: #2c1810;
+    border-radius: 50%;
+    left: -8px;
+    top: 5px;
+  }
+
+  .hair.girl-hair::after{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 30px;
+    background: #2c1810;
+    border-radius: 50%;
+    right: -8px;
+    top: 5px;
+  }
+
+  /* Árboles */
+  .tree{
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .tree.tree1{ left: 10%; }
+  .tree.tree2{ right: 15%; }
+
+  .tree-trunk{
+    width: 12px;
+    height: 35px;
+    background: #8b4513;
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+
+  .tree-leaves{
+    width: 45px;
+    height: 45px;
+    background: #2d5016;
+    border-radius: 50%;
+    margin: -15px auto 0;
+    position: relative;
+  }
+
+  .tree-leaves::before,
+  .tree-leaves::after{
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: #3a6b1f;
+    border-radius: 50%;
+  }
+
+  .tree-leaves::before{
+    top: -10px;
+    left: -10px;
+  }
+
+  .tree-leaves::after{
+    top: -10px;
+    right: -10px;
+  }
+
+  /* Flores del jardín */
+  .garden-flower{
+    position: absolute;
+    bottom: 20px;
+    animation: flowerSway 3s ease-in-out infinite;
+  }
+
+  @keyframes flowerSway{
+    0%, 100%{ transform: rotate(-5deg); }
+    50%{ transform: rotate(5deg); }
+  }
+
+  .garden-flower.f1{ left: 20%; animation-delay: 0s; }
+  .garden-flower.f2{ left: 25%; animation-delay: 0.5s; }
+  .garden-flower.f3{ left: 60%; animation-delay: 1s; }
+  .garden-flower.f4{ right: 25%; animation-delay: 0.3s; }
+  .garden-flower.f5{ right: 20%; animation-delay: 0.8s; }
+
+  .flower-stem{
+    width: 2px;
+    height: 25px;
+    background: #4a7c4e;
+    margin: 0 auto;
+  }
+
+  .flower-petals{
+    width: 16px;
+    height: 16px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .flower-petal{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .flower-petal.red{ background: #ff6b9d; }
+  .flower-petal.yellow{ background: #ffd700; }
+  .flower-petal.pink{ background: #ff69b4; }
+  .flower-petal.purple{ background: #da70d6; }
+
+  .flower-petal:nth-child(1){ top: -4px; left: 4px; }
+  .flower-petal:nth-child(2){ top: 4px; left: -4px; }
+  .flower-petal:nth-child(3){ top: 4px; right: -4px; }
+  .flower-petal:nth-child(4){ bottom: -4px; left: 4px; }
+
+  .flower-center{
+    width: 6px;
+    height: 6px;
+    background: #ffd700;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Animales */
+  .animal{
+    position: absolute;
+    bottom: 25px;
+    font-size: 24px;
+    animation: animalMove 8s ease-in-out infinite;
+  }
+
+  .animal.butterfly{
+    left: 55%;
+    animation: butterflyFly 6s ease-in-out infinite;
+  }
+
+  .animal.bird{
+    right: 30%;
+    animation: birdFly 7s ease-in-out infinite;
+  }
+
+  @keyframes animalMove{
+    0%, 100%{ transform: translateY(0); }
+    50%{ transform: translateY(-10px); }
+  }
+
+  @keyframes butterflyFly{
+    0%, 100%{ transform: translate(0, 0); }
+    50%{ transform: translate(20px, -15px); }
+  }
+
+  @keyframes birdFly{
+    0%, 100%{ transform: translate(0, 0); }
+    50%{ transform: translate(-25px, -20px); }
+  }
+
+  @media (max-width:768px){
+    .garden{ height: 80px; }
+    .stick-person{ transform: scale(0.8); }
+    .tree{ transform: scale(0.7); }
+    .garden-flower{ transform: scale(0.8); }
+    .animal{ font-size: 18px; }
+  }
+
+  /* Layout */
   .stage{
     width: 92vw;
     max-width: 950px;
@@ -157,7 +470,7 @@
     z-index:1;
   }
 
-
+  /* Card base */
   .card{
     box-sizing: border-box;
     width: 100%;
@@ -203,6 +516,7 @@
     letter-spacing: 0.3px;
   }
 
+  /* Floating emoji */
   .icon-wrap{
     width: 140px;
     height: 140px;
@@ -219,7 +533,7 @@
     100%{ transform: translateY(0) rotate(-3deg); }
   }
 
-
+  /* Buttons */
   .btn{
     margin-top: 26px;
     background: linear-gradient(135deg, #ff1493 0%, #ff4d91 50%, #ff69b4 100%);
@@ -243,12 +557,14 @@
   .btn:active{ transform: translateY(1px) scale(.98); box-shadow: 0 5px 15px rgba(255,20,147,0.3); }
   .btn:focus{ outline: 3px solid rgba(255,77,145,0.3); outline-offset: 2px; }
 
+  /* small sparkle */
   .sparkles{
     display:inline-block;
     margin-left:10px;
     opacity: .95;
   }
 
+  /* --- second screen: envelope --- */
   .envelope{
     width: 200px;
     height: 140px;
@@ -361,7 +677,56 @@
     font-size:17px;
   }
  
-    @media (max-width:520px){
+    /* Botón de música */
+  .music-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff1493 0%, #ff69b4 100%);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255,20,147,0.4);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 200ms, box-shadow 200ms;
+  }
+  
+  .music-btn:hover{
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(255,20,147,0.5);
+  }
+  
+  .music-btn:active{
+    transform: scale(0.95);
+  }
+  
+  .music-btn.playing{
+    animation: musicPulse 1s ease-in-out infinite;
+  }
+  
+  @keyframes musicPulse{
+    0%, 100%{ transform: scale(1); }
+    50%{ transform: scale(1.05); }
+  }
+
+  @media (max-width:520px){
+    .music-btn{
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      bottom: 15px;
+      right: 15px;
+    }
+  }
+
+  @media (max-width:520px){
     .stage{ height:68vh; max-height:680px; }
     h1{ font-size:36px; }
     .card{ padding:28px 20px; border-radius:24px; }
