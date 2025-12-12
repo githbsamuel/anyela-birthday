@@ -18,8 +18,6 @@
     overflow:hidden;
     position:relative;
   }
-
-  /* Sol feliz */
   .sun{
     position:fixed;
     top:8%;
@@ -51,8 +49,6 @@
     0%, 100%{ transform: scale(1); }
     50%{ transform: scale(1.08); }
   }
-
-  /* Nubes */
   .cloud{
     position:fixed;
     background: white;
@@ -150,7 +146,6 @@
     100%{ transform: translateX(calc(100vw + 200px)); }
   }
 
-  /* Layout */
   .stage{
     width: 92vw;
     max-width: 950px;
@@ -162,7 +157,7 @@
     z-index:1;
   }
 
-  /* Card base */
+
   .card{
     box-sizing: border-box;
     width: 100%;
@@ -208,7 +203,6 @@
     letter-spacing: 0.3px;
   }
 
-  /* Floating emoji */
   .icon-wrap{
     width: 140px;
     height: 140px;
@@ -225,7 +219,7 @@
     100%{ transform: translateY(0) rotate(-3deg); }
   }
 
-  /* Buttons */
+
   .btn{
     margin-top: 26px;
     background: linear-gradient(135deg, #ff1493 0%, #ff4d91 50%, #ff69b4 100%);
@@ -249,14 +243,12 @@
   .btn:active{ transform: translateY(1px) scale(.98); box-shadow: 0 5px 15px rgba(255,20,147,0.3); }
   .btn:focus{ outline: 3px solid rgba(255,77,145,0.3); outline-offset: 2px; }
 
-  /* small sparkle */
   .sparkles{
     display:inline-block;
     margin-left:10px;
     opacity: .95;
   }
 
-  /* --- second screen: envelope --- */
   .envelope{
     width: 200px;
     height: 140px;
