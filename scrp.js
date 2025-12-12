@@ -62,3 +62,55 @@
   document.addEventListener('DOMContentLoaded', () => {
     s1.dataset.visible = 'true';
   });
+
+const music = document.getElementById('bg-music');
+let musicStarted = false;
+
+
+function tryStartMusic() {
+  if (musicStarted) return;
+  music.loop = true;
+  const p = music.play();
+  if (p !== undefined) {
+    p.then(() => {
+      musicStarted = true;
+      document.getElementById('play-overlay').style.display = 'none';
+    }).catch((err) => {
+    
+      console.log('Autoplay bloqueado:', err);
+      document.getElementById('play-overlay').style.display = 'block';
+    });
+  }
+}
+
+
+toEnvelopeBtn.addEventListener('click', () => {
+  tryStartMusic();
+  env.style.transform = 'rotateY(12deg)';
+  setTimeout(()=> { env.style.transform = 'rotateY(0)'; showScreen(s2); }, 220);
+});
+
+
+openEnvBtn.addEventListener('click', () => {
+  tryStartMusic();
+  flap.style.transform = 'rotateX(-180deg) translateY(-6px)';
+  flap.style.boxShadow = 'none';
+  env.style.transform = 'translateY(-6px) rotateZ(-3deg) scale(1.02)';
+  setTimeout(()=> {
+    letter.classList.add('revealed');
+    showScreen(s3);
+    setTimeout(()=> {
+      flap.style.transform = '';
+      env.style.transform = '';
+    }, 600);
+  }, 420);
+});
+
+
+document.getElementById('manual-play').addEventListener('click', () => {
+  music.play().then(() => {
+    musicStarted = true;
+    document.getElementById('play-overlay').style.display = 'none';
+  }).catch(e => console.log('No se pudo reproducir manualmente', e));
+});
+

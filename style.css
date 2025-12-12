@@ -415,3 +415,15 @@
     .letter{ padding:16px; height:82%; }
     .letter p{ margin:6px 0 0 0; font-size:13px; }
   }
+  #play-overlay{
+    position: fixed;
+    left: 12px;
+    bottom: 12px;
+    z-index: 9999;
+    display: none;
+  }
+  #play-overlay button{
+    background: linear-gradient(180deg,#ff7aa6,#ff4d91);
+    color:white;border:none;padding:10px 14px;border-radius:999px;font-weight:700;
+    box-shadow:0 8px 20px rgba(0,0,0,0.16); cursor:pointer;
+  }

@@ -132,6 +132,7 @@
 
                 <button class="btn" id="to-envelope"> CLICK </button>
             </div>
+        
         </div>
 
 
@@ -175,8 +176,10 @@
         </div>
     </div>
 
-    <audio id="bg-music" src="ff.mp3" autoplay loop></audio>
-
+    <audio id="bg-music" src="ff.mp3" preload="auto"></audio>
+        <div id="play-overlay" aria-hidden="true">
+  <button id="manual-play">🔊 Reproducir</button>
+</div>
 </body>
 
 </html>
