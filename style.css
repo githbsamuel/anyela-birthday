@@ -18,8 +18,6 @@
     overflow:hidden;
     position:relative;
   }
-
-  /* Sol feliz */
   .sun{
     position:fixed;
     top:8%;
@@ -52,7 +50,6 @@
     50%{ transform: scale(1.08); }
   }
 
-  /* Nubes */
   .cloud{
     position:fixed;
     background: white;
@@ -150,7 +147,6 @@
     100%{ transform: translateX(calc(100vw + 200px)); }
   }
 
-  /* Jardín en la parte inferior */
   .garden{
     position: fixed;
     bottom: 0;
@@ -253,8 +249,6 @@
     transform: rotate(-30deg);
     left: 1px;
   }
-
-  /* Flor en la mano del chico */
   .flower-hand{
     position: absolute;
     top: 10px;
@@ -267,8 +261,6 @@
     0%, 100%{ transform: translateY(0) rotate(-10deg); }
     50%{ transform: translateY(-5px) rotate(-15deg); }
   }
-
-  /* Cabello */
   .hair{
     position: absolute;
     top: -8px;
@@ -311,7 +303,6 @@
     top: 5px;
   }
 
-  /* Árboles */
   .tree{
     position: absolute;
     bottom: 20px;
@@ -356,8 +347,6 @@
     top: -10px;
     right: -10px;
   }
-
-  /* Flores del jardín */
   .garden-flower{
     position: absolute;
     bottom: 20px;
@@ -417,7 +406,6 @@
     transform: translate(-50%, -50%);
   }
 
-  /* Animales */
   .animal{
     position: absolute;
     bottom: 25px;
@@ -457,8 +445,6 @@
     .garden-flower{ transform: scale(0.8); }
     .animal{ font-size: 18px; }
   }
-
-  /* Layout */
   .stage{
     width: 92vw;
     max-width: 950px;
@@ -470,7 +456,6 @@
     z-index:1;
   }
 
-  /* Card base */
   .card{
     box-sizing: border-box;
     width: 100%;
@@ -515,8 +500,6 @@
     font-weight: 500;
     letter-spacing: 0.3px;
   }
-
-  /* Floating emoji */
   .icon-wrap{
     width: 140px;
     height: 140px;
@@ -532,8 +515,6 @@
     50%{ transform: translateY(-12px) rotate(3deg); }
     100%{ transform: translateY(0) rotate(-3deg); }
   }
-
-  /* Buttons */
   .btn{
     margin-top: 26px;
     background: linear-gradient(135deg, #ff1493 0%, #ff4d91 50%, #ff69b4 100%);
@@ -556,15 +537,12 @@
   }
   .btn:active{ transform: translateY(1px) scale(.98); box-shadow: 0 5px 15px rgba(255,20,147,0.3); }
   .btn:focus{ outline: 3px solid rgba(255,77,145,0.3); outline-offset: 2px; }
-
-  /* small sparkle */
   .sparkles{
     display:inline-block;
     margin-left:10px;
     opacity: .95;
   }
 
-  /* --- second screen: envelope --- */
   .envelope{
     width: 200px;
     height: 140px;
@@ -676,8 +654,6 @@
     font-weight:700;
     font-size:17px;
   }
- 
-    /* Botón de música */
   .music-btn{
     position: fixed;
     bottom: 20px;
