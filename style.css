@@ -1,6 +1,6 @@
- :root{
-    --bg1: #daf2ff;
-    --bg2: #f7f7ff;
+:root{
+    --bg1: #b0bec5;
+    --bg2: #90a4ae;
     --pink: #ff4d91;
     --pink-2: #ff7aa6;
     --card-bg: #fff6f8;
@@ -11,149 +11,205 @@
     height:100%;
     margin:0;
     font-family: "Baloo 2", system-ui, Arial, sans-serif;
-    background: linear-gradient(135deg, #87ceeb 0%, #b4e4ff 40%, #e0f4ff 100%);
+    /* Cielo nublado gris-azulado */
+    background: linear-gradient(180deg, #3a4a5c 0%, #5a6e80 25%, #7a8e9e 55%, #9aaebb 100%);
     display:flex;
     align-items:center;
     justify-content:center;
     overflow:hidden;
     position:relative;
   }
-  .sun{
-    position:fixed;
-    top:8%;
-    right:12%;
-    width:100px;
-    height:100px;
-    background: radial-gradient(circle, #ffeb3b 0%, #ffd54f 100%);
-    border-radius:50%;
-    box-shadow: 0 0 40px rgba(255,235,59,0.6);
-    animation: sunPulse 4s ease-in-out infinite;
-    z-index:0;
+
+  /* Capa de niebla / neblina general */
+  .overcast {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(160,180,200,0.35) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    animation: overcastShift 12s ease-in-out infinite alternate;
   }
-  .sun::before{
-    content:'😊';
-    position:absolute;
-    inset:0;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:42px;
+  @keyframes overcastShift {
+    0%   { opacity: 0.6; transform: translateX(-3%); }
+    100% { opacity: 1;   transform: translateX(3%); }
   }
 
-  @media (max-width:768px){
-    .sun{ width:70px; height:70px; top:5%; right:8%; }
-    .sun::before{ font-size:30px; }
+  /* RELÁMPAGO */
+  .lightning {
+    position: fixed;
+    inset: 0;
+    background: rgba(220, 240, 255, 1);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 50;
+    transition: opacity 0.05s;
   }
 
-  @keyframes sunPulse{
-    0%, 100%{ transform: scale(1); }
-    50%{ transform: scale(1.08); }
+  /* LLUVIA */
+  .rain-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+    overflow: hidden;
   }
 
+  .raindrop {
+    position: absolute;
+    top: -20px;
+    width: 1.5px;
+    background: linear-gradient(180deg, rgba(180,210,240,0) 0%, rgba(180,210,240,0.85) 100%);
+    border-radius: 2px;
+    animation: rainFall linear infinite;
+    transform: rotate(12deg);
+  }
+
+  @keyframes rainFall {
+    0%   { transform: translateY(-20px) rotate(12deg); opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { transform: translateY(105vh) rotate(12deg); opacity: 0; }
+  }
+
+  /* NUBES — más oscuras, más grandes, más lentas */
   .cloud{
     position:fixed;
-    background: white;
+    background: #8fa5b8;
     border-radius:100px;
-    opacity:0.85;
-    animation: cloudFloat 25s linear infinite;
-    z-index:0;
+    opacity:0.92;
+    animation: cloudFloat linear infinite;
+    z-index:5;
   }
   
   .cloud::before,
   .cloud::after{
     content:'';
     position:absolute;
-    background:white;
+    background: inherit;
     border-radius:100px;
   }
 
   .cloud1{
-    width:100px;
-    height:40px;
-    top:15%;
-    left:-120px;
+    width:180px;
+    height:60px;
+    top:6%;
+    left:-200px;
+    animation-duration: 40s;
+    background: #7a95aa;
   }
   .cloud1::before{
-    width:50px;
-    height:50px;
-    top:-25px;
-    left:10px;
+    width:90px; height:75px;
+    top:-38px; left:20px;
+    background: #7a95aa;
   }
   .cloud1::after{
-    width:60px;
-    height:40px;
-    top:-20px;
-    right:10px;
+    width:110px; height:60px;
+    top:-30px; right:20px;
+    background: #8faabb;
   }
 
   .cloud2{
-    width:80px;
-    height:35px;
-    top:65%;
-    left:-100px;
-    animation-delay:-8s;
-    animation-duration:30s;
+    width:140px;
+    height:50px;
+    top:18%;
+    left:-160px;
+    animation-delay:-10s;
+    animation-duration:50s;
+    background: #6b8799;
   }
   .cloud2::before{
-    width:45px;
-    height:45px;
-    top:-20px;
-    left:8px;
+    width:70px; height:65px;
+    top:-30px; left:12px;
+    background: #6b8799;
   }
   .cloud2::after{
-    width:50px;
-    height:35px;
-    top:-18px;
-    right:8px;
+    width:80px; height:55px;
+    top:-25px; right:12px;
+    background: #7a96aa;
   }
 
   .cloud3{
-    width:120px;
-    height:45px;
-    top:40%;
-    left:-140px;
-    animation-delay:-16s;
-    animation-duration:35s;
+    width:200px;
+    height:65px;
+    top:3%;
+    left:-220px;
+    animation-delay:-22s;
+    animation-duration:55s;
+    background: #536e80;
   }
   .cloud3::before{
-    width:55px;
-    height:55px;
-    top:-28px;
-    left:15px;
+    width:100px; height:90px;
+    top:-45px; left:25px;
+    background: #536e80;
   }
   .cloud3::after{
-    width:65px;
+    width:120px; height:70px;
+    top:-35px; right:25px;
+    background: #647f92;
+  }
+
+  /* Nubes extra para más cobertura */
+  .cloud4{
+    width:160px;
+    height:55px;
+    top:28%;
+    left:-180px;
+    animation-delay:-35s;
+    animation-duration:45s;
+    background: #8a9faf;
+  }
+  .cloud4::before{
+    width:80px; height:70px;
+    top:-35px; left:18px;
+    background: #8a9faf;
+  }
+  .cloud4::after{
+    width:95px; height:58px;
+    top:-28px; right:18px;
+    background: #9aaebb;
+  }
+
+  .cloud5{
+    width:130px;
     height:45px;
-    top:-25px;
-    right:15px;
+    top:42%;
+    left:-150px;
+    animation-delay:-18s;
+    animation-duration:38s;
+    background: #758fa0;
+  }
+  .cloud5::before{
+    width:65px; height:60px;
+    top:-28px; left:10px;
+    background: #758fa0;
+  }
+  .cloud5::after{
+    width:75px; height:48px;
+    top:-22px; right:10px;
+    background: #849eaf;
   }
 
   @media (max-width:768px){
-    .cloud1{ width:70px; height:30px; }
-    .cloud1::before{ width:35px; height:35px; top:-18px; }
-    .cloud1::after{ width:40px; height:30px; top:-15px; }
-    
-    .cloud2{ width:60px; height:25px; }
-    .cloud2::before{ width:32px; height:32px; top:-15px; }
-    .cloud2::after{ width:35px; height:25px; top:-13px; }
-    
-    .cloud3{ width:85px; height:32px; }
-    .cloud3::before{ width:40px; height:40px; top:-20px; }
-    .cloud3::after{ width:45px; height:32px; top:-18px; }
+    .cloud1{ width:120px; height:42px; }
+    .cloud2{ width:100px; height:36px; }
+    .cloud3{ width:140px; height:46px; }
+    .cloud4{ width:110px; height:38px; }
+    .cloud5{ width:90px;  height:32px; }
   }
 
   @keyframes cloudFloat{
     0%{ transform: translateX(0); }
-    100%{ transform: translateX(calc(100vw + 200px)); }
+    100%{ transform: translateX(calc(100vw + 280px)); }
   }
 
+  /* JARDÍN — más oscuro y húmedo */
   .garden{
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     height: 120px;
-    background: linear-gradient(180deg, #7bc97f 0%, #5a9e5e 100%);
+    background: linear-gradient(180deg, #4a7c50 0%, #2e5c34 100%);
     z-index: 2;
     overflow: hidden;
   }
@@ -162,14 +218,32 @@
     position: absolute;
     bottom: 0;
     width: 4px;
-    background: #4a7c4e;
+    background: #3a6040;
     border-radius: 50% 50% 0 0;
     animation: grassSway 2s ease-in-out infinite;
   }
 
   @keyframes grassSway{
-    0%, 100%{ transform: rotate(-2deg); }
-    50%{ transform: rotate(2deg); }
+    0%, 100%{ transform: rotate(-3deg); }
+    50%{ transform: rotate(3deg); }
+  }
+
+  /* CHARCOS */
+  .puddle {
+    position: absolute;
+    bottom: 2px;
+    background: rgba(100, 150, 200, 0.4);
+    border-radius: 50%;
+    animation: puddle-ripple 1.8s ease-in-out infinite;
+    border: 1px solid rgba(150,190,230,0.5);
+  }
+  .puddle1 { width: 40px; height: 12px; left: 22%; }
+  .puddle2 { width: 60px; height: 16px; left: 50%; }
+  .puddle3 { width: 35px; height: 10px; right: 22%; }
+
+  @keyframes puddle-ripple {
+    0%, 100% { transform: scaleX(1); opacity: 0.5; }
+    50%       { transform: scaleX(1.08); opacity: 0.8; }
   }
 
   .stick-person{
@@ -314,7 +388,7 @@
   .tree-trunk{
     width: 12px;
     height: 35px;
-    background: #8b4513;
+    background: #5a3010;
     margin: 0 auto;
     border-radius: 2px;
   }
@@ -322,7 +396,7 @@
   .tree-leaves{
     width: 45px;
     height: 45px;
-    background: #2d5016;
+    background: #1e3d0f;
     border-radius: 50%;
     margin: -15px auto 0;
     position: relative;
@@ -334,7 +408,7 @@
     position: absolute;
     width: 35px;
     height: 35px;
-    background: #3a6b1f;
+    background: #254d14;
     border-radius: 50%;
   }
 
@@ -347,6 +421,7 @@
     top: -10px;
     right: -10px;
   }
+
   .garden-flower{
     position: absolute;
     bottom: 20px;
@@ -354,8 +429,8 @@
   }
 
   @keyframes flowerSway{
-    0%, 100%{ transform: rotate(-5deg); }
-    50%{ transform: rotate(5deg); }
+    0%, 100%{ transform: rotate(-6deg); }
+    50%{ transform: rotate(6deg); }
   }
 
   .garden-flower.f1{ left: 20%; animation-delay: 0s; }
@@ -367,7 +442,7 @@
   .flower-stem{
     width: 2px;
     height: 25px;
-    background: #4a7c4e;
+    background: #3a5e3e;
     margin: 0 auto;
   }
 
@@ -383,12 +458,13 @@
     height: 8px;
     border-radius: 50%;
     position: absolute;
+    filter: saturate(0.75);
   }
 
-  .flower-petal.red{ background: #ff6b9d; }
-  .flower-petal.yellow{ background: #ffd700; }
-  .flower-petal.pink{ background: #ff69b4; }
-  .flower-petal.purple{ background: #da70d6; }
+  .flower-petal.red{ background: #cc5580; }
+  .flower-petal.yellow{ background: #c8a800; }
+  .flower-petal.pink{ background: #cc5090; }
+  .flower-petal.purple{ background: #9a50b0; }
 
   .flower-petal:nth-child(1){ top: -4px; left: 4px; }
   .flower-petal:nth-child(2){ top: 4px; left: -4px; }
@@ -398,7 +474,7 @@
   .flower-center{
     width: 6px;
     height: 6px;
-    background: #ffd700;
+    background: #c8a800;
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -410,7 +486,7 @@
     position: absolute;
     bottom: 25px;
     font-size: 24px;
-    animation: animalMove 8s ease-in-out infinite;
+    filter: saturate(0.6);
   }
 
   .animal.butterfly{
@@ -421,11 +497,6 @@
   .animal.bird{
     right: 30%;
     animation: birdFly 7s ease-in-out infinite;
-  }
-
-  @keyframes animalMove{
-    0%, 100%{ transform: translateY(0); }
-    50%{ transform: translateY(-10px); }
   }
 
   @keyframes butterflyFly{
@@ -445,6 +516,7 @@
     .garden-flower{ transform: scale(0.8); }
     .animal{ font-size: 18px; }
   }
+
   .stage{
     width: 92vw;
     max-width: 950px;
@@ -453,7 +525,7 @@
     min-height: 400px;
     position: relative;
     perspective: 1200px;
-    z-index:1;
+    z-index:15;
   }
 
   .card{
@@ -463,7 +535,7 @@
     background: linear-gradient(135deg, #ffe8f0 0%, #fff5f8 50%, #ffffff 100%);
     border-radius: 32px;
     border: 3px solid rgba(255,77,145,0.25);
-    box-shadow: 0 30px 60px rgba(255,77,145,0.15), 0 10px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3), 0 10px 20px rgba(0,0,0,0.15);
     padding: 40px 45px;
     display:flex;
     flex-direction:column;
