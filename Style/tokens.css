@@ -1,0 +1,37 @@
+
+:root {
+
+  --pink:        #ff1493;
+  --pink-2:      #ff4d91;
+  --pink-3:      #ff69b4;
+  --pink-light:  #ff8dc7;
+  --pink-bg:     #ffe8f0;
+
+ 
+  --card-bg:        #fff6f8;
+  --card-border:    rgba(255,77,145,0.25);
+  --card-shadow:    0 30px 60px rgba(0,0,0,0.3), 0 10px 20px rgba(0,0,0,0.15);
+
+
+  --text-muted:  #a67c96;
+  --text-dark:   #3e505f;
+
+ 
+  --garden-top:  #4a7c50;
+  --garden-bot:  #2e5c34;
+  --grass:       #3a6040;
+
+ 
+  --storm-bg-top: #3a4a5c;
+  --storm-bg-bot: #9aaebb;
+  --cloud-1:      #7a95aa;
+  --cloud-2:      #6b8799;
+  --cloud-3:      #536e80;
+  --cloud-4:      #8a9faf;
+  --cloud-5:      #758fa0;
+
+  
+  --btn-bg:      linear-gradient(135deg, var(--pink) 0%, var(--pink-2) 50%, var(--pink-3) 100%);
+  --btn-shadow:  0 10px 30px rgba(255,20,147,0.35);
+  --btn-hover:   linear-gradient(135deg, #ff0080 0%, #ff3385 50%, #ff5599 100%);
+}
