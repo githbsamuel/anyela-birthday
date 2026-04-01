@@ -10,11 +10,10 @@
   <link rel="stylesheet" href="./Style/tokens.css">
   <link rel="stylesheet" href="./Style/index.css">
   <link rel="stylesheet" href="./Style/themes.css">
-
+  <link rel="stylesheet" href="./Style/garden.css">
 </head>
 
 <body>
-
   <div class="sun sun-el"></div>
   <div class="overcast"></div>
   <div class="cloud cloud1"></div>
@@ -25,35 +24,55 @@
   <div class="rain-container" id="rain-container"></div>
   <div class="lightning"      id="lightning"></div>
 
-
   <div class="garden">
-    <div class="grass-blade" style="left:5%;  height:15px; animation-delay:0s;"></div>
-    <div class="grass-blade" style="left:12%; height:18px; animation-delay:0.3s;"></div>
-    <div class="grass-blade" style="left:18%; height:12px; animation-delay:0.6s;"></div>
-    <div class="grass-blade" style="left:28%; height:16px; animation-delay:0.2s;"></div>
-    <div class="grass-blade" style="left:38%; height:14px; animation-delay:0.8s;"></div>
-    <div class="grass-blade" style="left:48%; height:17px; animation-delay:0.4s;"></div>
-    <div class="grass-blade" style="left:58%; height:13px; animation-delay:0.7s;"></div>
-    <div class="grass-blade" style="left:68%; height:15px; animation-delay:0.1s;"></div>
-    <div class="grass-blade" style="left:78%; height:19px; animation-delay:0.5s;"></div>
-    <div class="grass-blade" style="left:88%; height:14px; animation-delay:0.9s;"></div>
-    <div class="grass-blade" style="left:95%; height:16px; animation-delay:0.3s;"></div>
 
-  
+    <div class="grass-blade g-dark"  style="left:2%;  width:3px; height:14px; animation-duration:2.1s; animation-delay:0s;"></div>
+    <div class="grass-blade g-mid"   style="left:4%;  width:5px; height:19px; animation-duration:1.9s; animation-delay:0.2s;"></div>
+    <div class="grass-blade g-light" style="left:6%;  width:3px; height:12px; animation-duration:2.4s; animation-delay:0.5s;"></div>
+    <div class="grass-blade g-pale"  style="left:8%;  width:4px; height:16px; animation-duration:2.0s; animation-delay:0.8s;"></div>
+    <div class="grass-blade g-mid"   style="left:10%; width:3px; height:13px; animation-duration:2.3s; animation-delay:0.1s;"></div>
+    <div class="grass-blade g-dark"  style="left:13%; width:5px; height:20px; animation-duration:1.8s; animation-delay:0.6s;"></div>
+    <div class="grass-blade g-light" style="left:16%; width:3px; height:11px; animation-duration:2.5s; animation-delay:0.3s;"></div>
+    <div class="grass-blade g-pale"  style="left:19%; width:4px; height:17px; animation-duration:2.1s; animation-delay:0.9s;"></div>
+    <div class="grass-blade g-mid"   style="left:22%; width:3px; height:14px; animation-duration:2.0s; animation-delay:0.4s;"></div>
+    <div class="grass-blade g-dark"  style="left:25%; width:5px; height:18px; animation-duration:1.9s; animation-delay:0.7s;"></div>
+    <div class="grass-blade g-light" style="left:28%; width:3px; height:12px; animation-duration:2.3s; animation-delay:0.2s;"></div>
+    <div class="grass-blade g-pale"  style="left:31%; width:4px; height:15px; animation-duration:2.2s; animation-delay:0.5s;"></div>
+    <div class="grass-blade g-mid"   style="left:34%; width:3px; height:19px; animation-duration:2.0s; animation-delay:0.0s;"></div>
+    <div class="grass-blade g-dark"  style="left:37%; width:5px; height:13px; animation-duration:1.8s; animation-delay:0.8s;"></div>
+    <div class="grass-blade g-light" style="left:40%; width:3px; height:16px; animation-duration:2.4s; animation-delay:0.3s;"></div>
+    <div class="grass-blade g-pale"  style="left:43%; width:4px; height:11px; animation-duration:2.1s; animation-delay:0.6s;"></div>
+    <div class="grass-blade g-mid"   style="left:46%; width:3px; height:18px; animation-duration:2.3s; animation-delay:0.1s;"></div>
+    <div class="grass-blade g-dark"  style="left:49%; width:5px; height:14px; animation-duration:1.9s; animation-delay:0.4s;"></div>
+    <div class="grass-blade g-light" style="left:52%; width:3px; height:20px; animation-duration:2.0s; animation-delay:0.7s;"></div>
+    <div class="grass-blade g-pale"  style="left:55%; width:4px; height:12px; animation-duration:2.5s; animation-delay:0.2s;"></div>
+    <div class="grass-blade g-mid"   style="left:58%; width:3px; height:17px; animation-duration:2.2s; animation-delay:0.9s;"></div>
+    <div class="grass-blade g-dark"  style="left:61%; width:5px; height:15px; animation-duration:1.8s; animation-delay:0.5s;"></div>
+    <div class="grass-blade g-light" style="left:64%; width:3px; height:13px; animation-duration:2.1s; animation-delay:0.0s;"></div>
+    <div class="grass-blade g-pale"  style="left:67%; width:4px; height:19px; animation-duration:2.3s; animation-delay:0.3s;"></div>
+    <div class="grass-blade g-mid"   style="left:70%; width:3px; height:11px; animation-duration:2.0s; animation-delay:0.8s;"></div>
+    <div class="grass-blade g-dark"  style="left:73%; width:5px; height:16px; animation-duration:1.9s; animation-delay:0.4s;"></div>
+    <div class="grass-blade g-light" style="left:76%; width:3px; height:14px; animation-duration:2.4s; animation-delay:0.1s;"></div>
+    <div class="grass-blade g-pale"  style="left:79%; width:4px; height:20px; animation-duration:2.2s; animation-delay:0.6s;"></div>
+    <div class="grass-blade g-mid"   style="left:82%; width:3px; height:12px; animation-duration:2.0s; animation-delay:0.9s;"></div>
+    <div class="grass-blade g-dark"  style="left:85%; width:5px; height:17px; animation-duration:1.8s; animation-delay:0.2s;"></div>
+    <div class="grass-blade g-light" style="left:88%; width:3px; height:15px; animation-duration:2.5s; animation-delay:0.5s;"></div>
+    <div class="grass-blade g-pale"  style="left:91%; width:4px; height:13px; animation-duration:2.1s; animation-delay:0.7s;"></div>
+    <div class="grass-blade g-mid"   style="left:94%; width:3px; height:18px; animation-duration:2.3s; animation-delay:0.0s;"></div>
+    <div class="grass-blade g-dark"  style="left:97%; width:5px; height:11px; animation-duration:2.0s; animation-delay:0.3s;"></div>
+
     <div class="stick-person boy">
       <div class="stick-head"><div class="hair boy-hair"></div></div>
       <div class="stick-body"></div>
       <div class="stick-arms">
         <div class="stick-arm left"></div>
-        <div class="stick-arm right"><span class="flower-hand">🌼</span></div>
+        <div class="stick-arm right"><span class="flower-hand">📸</span></div>
       </div>
       <div class="stick-legs">
         <div class="stick-leg left"></div>
         <div class="stick-leg right"></div>
       </div>
     </div>
-
-
     <div class="stick-person girl">
       <div class="stick-head"><div class="hair girl-hair"></div></div>
       <div class="stick-body"></div>
@@ -66,17 +85,6 @@
         <div class="stick-leg right"></div>
       </div>
     </div>
-
-
-    <div class="tree tree1">
-      <div class="tree-leaves"></div>
-      <div class="tree-trunk"></div>
-    </div>
-    <div class="tree tree2">
-      <div class="tree-leaves"></div>
-      <div class="tree-trunk"></div>
-    </div>
-
 
     <div class="lily-wrap lw1">
       <svg width="38" height="70" viewBox="0 0 38 70" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -96,7 +104,6 @@
         <path d="M19 35 Q19 27 19 21" stroke="#c490e8" stroke-width="0.6" stroke-linecap="round" opacity="0.7"/>
       </svg>
     </div>
-
     <div class="lily-wrap lw2">
       <svg width="38" height="70" viewBox="0 0 38 70" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M19 70 Q18 52 19 38" stroke="#3a6040" stroke-width="2.2" stroke-linecap="round"/>
@@ -115,14 +122,11 @@
         <path d="M19 35 Q19 27 19 21" stroke="#dda8f8" stroke-width="0.6" stroke-linecap="round" opacity="0.7"/>
       </svg>
     </div>
-
     <div class="lily-wrap lw3">
       <svg width="42" height="78" viewBox="0 0 42 78" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M21 78 Q20 58 21 42" stroke="#3a6040" stroke-width="2.5" stroke-linecap="round"/>
         <path d="M21 62 Q11 57 8 49" stroke="#4a7c4e" stroke-width="1.8" stroke-linecap="round" fill="none"/>
         <path d="M21 56 Q31 51 34 43" stroke="#4a7c4e" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-        <path d="M14 44 Q12 37 14 30 Q16 35 14 44Z" fill="#d45090" opacity="0.8"/>
-        <path d="M14 44 Q16 37 18 30 Q16 35 14 44Z" fill="#e870b0" opacity="0.8"/>
         <path d="M21 42 Q14 33 13 22 Q17 29 21 27 Q25 29 29 22 Q28 33 21 42Z" fill="#c0406e" opacity="0.88"/>
         <path d="M21 39 Q16 29 17 19 Q19 25 21 24 Q23 25 25 19 Q26 29 21 39Z" fill="#e0608e" opacity="0.92"/>
         <path d="M21 39 Q11 32 9 22 Q15 27 16 24 Q18 26 21 39Z" fill="#d0508a" opacity="0.88"/>
@@ -133,10 +137,8 @@
         <circle cx="18" cy="19" r="2" fill="#f5a000"/>
         <circle cx="21" cy="17" r="2" fill="#f5a000"/>
         <circle cx="24" cy="19" r="2" fill="#f5a000"/>
-        <path d="M21 39 Q21 30 21 24" stroke="#e898c0" stroke-width="0.7" stroke-linecap="round" opacity="0.6"/>
       </svg>
     </div>
-
     <div class="lily-wrap lw4">
       <svg width="36" height="66" viewBox="0 0 36 66" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M18 66 Q17 50 18 36" stroke="#3a6040" stroke-width="2" stroke-linecap="round"/>
@@ -152,26 +154,22 @@
         <circle cx="15" cy="15" r="1.5" fill="#d89000"/>
         <circle cx="18" cy="13" r="1.5" fill="#d89000"/>
         <circle cx="21" cy="15" r="1.5" fill="#d89000"/>
-        <path d="M18 33 Q18 25 18 20" stroke="#9060c8" stroke-width="0.6" stroke-linecap="round" opacity="0.7"/>
       </svg>
     </div>
-
     <div class="lily-wrap lw5">
       <svg width="36" height="66" viewBox="0 0 36 66" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M18 66 Q17 50 18 36" stroke="#3a6040" stroke-width="2" stroke-linecap="round"/>
         <path d="M18 54 Q8 49 5 42" stroke="#4a7c4e" stroke-width="1.6" stroke-linecap="round" fill="none"/>
         <path d="M18 48 Q28 43 31 37" stroke="#4a7c4e" stroke-width="1.6" stroke-linecap="round" fill="none"/>
-        <path d="M18 36 Q14 28 15 20 Q17 26 18 36Z" fill="#8868c0" opacity="0.9"/>
-        <path d="M18 36 Q22 28 21 20 Q19 26 18 36Z" fill="#a888e0" opacity="0.9"/>
         <path d="M18 36 Q11 30 10 21 Q14 26 15 23 Q16 25 18 36Z" fill="#9878d0" opacity="0.85"/>
         <path d="M18 36 Q25 30 26 21 Q22 26 21 23 Q20 25 18 36Z" fill="#9878d0" opacity="0.85"/>
+        <path d="M18 33 Q13 25 14 16 Q16 21 18 20 Q20 21 22 16 Q23 25 18 33Z" fill="#b898e8" opacity="0.92"/>
         <line x1="18" y1="28" x2="15" y2="18" stroke="#f5e060" stroke-width="1" stroke-linecap="round"/>
         <line x1="18" y1="28" x2="18" y2="16" stroke="#f5e060" stroke-width="1" stroke-linecap="round"/>
         <line x1="18" y1="28" x2="21" y2="18" stroke="#f5e060" stroke-width="1" stroke-linecap="round"/>
         <circle cx="15" cy="17" r="1.5" fill="#e8b000"/>
         <circle cx="18" cy="15" r="1.5" fill="#e8b000"/>
         <circle cx="21" cy="17" r="1.5" fill="#e8b000"/>
-        <path d="M18 33 Q18 26 18 21" stroke="#c0a0e8" stroke-width="0.6" stroke-linecap="round" opacity="0.7"/>
       </svg>
     </div>
 
@@ -179,15 +177,124 @@
     <div class="puddle puddle1"></div>
     <div class="puddle puddle2"></div>
     <div class="puddle puddle3"></div>
+    
 
-    <div class="animal butterfly">🦋</div>
-    <div class="animal bird">🐦</div>
+    <div class="picnic-wrap" aria-hidden="true">
+      <svg width="110" height="58" viewBox="0 0 110 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="checker" x="0" y="0" width="12" height="8" patternUnits="userSpaceOnUse">
+            <rect width="6" height="4" fill="white" opacity="0.28"/>
+            <rect x="6" y="4" width="6" height="4" fill="white" opacity="0.28"/>
+          </pattern>
+        </defs>
+        <ellipse cx="55" cy="50" rx="50" ry="8" fill="#2a5228" opacity="0.35"/>
+        <rect x="4" y="36" width="102" height="16" rx="4" fill="#d32f2f"/>
+        <rect x="4" y="36" width="102" height="16" rx="4" fill="url(#checker)"/>
+        <rect x="4" y="34" width="102" height="4"  rx="2" fill="#b71c1c" opacity="0.6"/>
+        <rect x="64" y="18" width="34" height="22" rx="4" fill="#a0622a" stroke="#7a4018" stroke-width="1"/>
+        <path d="M65 22 Q81 16 97 22" stroke="#7a4018" stroke-width="1.2" fill="none"/>
+        <path d="M65 26 Q81 20 97 26" stroke="#7a4018" stroke-width="1.2" fill="none"/>
+        <path d="M65 30 Q81 24 97 30" stroke="#7a4018" stroke-width="1.2" fill="none"/>
+        <path d="M70 12 Q81 6 92 12" stroke="#7a4018" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="81" cy="18" rx="17" ry="6" fill="#bc7a38" stroke="#7a4018" stroke-width="1"/>
+        <rect x="10" y="26" width="22" height="14" rx="3" fill="#f5dea0" stroke="#d4a040" stroke-width="0.8"/>
+        <rect x="10" y="30" width="22" height="6"  rx="2" fill="#e07040"/>
+        <rect x="10" y="26" width="22" height="4"  rx="3" fill="#f0c060"/>
+        <rect x="10" y="36" width="22" height="2"  rx="1" fill="#c8983a" opacity="0.5"/>
+        <circle cx="43" cy="32" r="9" fill="#e53935"/>
+        <path d="M43 23 Q44.5 19 47 20" stroke="#2e7d32" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        <path d="M36 28 Q37.5 24.5 40.5 26.5" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+        <rect x="22" y="12" width="16" height="18" rx="4" fill="#fff8e1" stroke="#bfa060" stroke-width="1"/>
+        <path d="M38 16 Q43 16 43 20 Q43 24 38 24" stroke="#bfa060" stroke-width="1.2" fill="none"/>
+        <ellipse cx="30" cy="12" rx="8" ry="3" fill="#fff8e1" stroke="#bfa060" stroke-width="1"/>
+        <path d="M24 17 Q30 15 36 17" stroke="#c8a020" stroke-width="0.9" fill="none" opacity="0.55"/>
+        <path d="M25 8 Q25.5 5.5 25 3" stroke="#bfa060" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.5"/>
+        <path d="M30 7 Q30.5 4.5 30 2" stroke="#bfa060" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.5"/>
+        <path d="M35 8 Q35.5 5.5 35 3" stroke="#bfa060" stroke-width="0.9" fill="none" stroke-linecap="round" opacity="0.5"/>
+      </svg>
+    </div>
+
+    <div class="butterfly-wrap" aria-hidden="true">
+      <svg class="butterfly-svg" width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 14 Q7 4 2 8 Q-1 15 5 18 Q10 21 16 14Z" fill="#e040fb" opacity="0.9"/>
+        <path d="M16 14 Q7 18 4 23 Q6 28 11 26 Q15 23 16 14Z" fill="#ce93d8" opacity="0.85"/>
+        <path d="M16 14 Q25 4 30 8 Q33 15 27 18 Q22 21 16 14Z" fill="#ab47bc" opacity="0.9"/>
+        <path d="M16 14 Q25 18 28 23 Q26 28 21 26 Q17 23 16 14Z" fill="#ce93d8" opacity="0.85"/>
+        <path d="M10 8 Q13 10 16 14 Q13 9 10 8Z" fill="rgba(255,255,255,0.2)"/>
+        <ellipse cx="16" cy="14" rx="1.8" ry="7" fill="#4a1060"/>
+        <circle  cx="16" cy="8"  r="1.8" fill="#4a1060"/>
+        <path d="M15 7 Q11 3 9 2"  stroke="#4a1060" stroke-width="1" fill="none" stroke-linecap="round"/>
+        <path d="M17 7 Q21 3 23 2" stroke="#4a1060" stroke-width="1" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <div class="bird-wrap" aria-hidden="true">
+      <svg class="bird-svg" width="28" height="20" viewBox="0 0 28 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 11 Q8 4 2 6 Q6 10 14 11Z" fill="#c8a060" opacity="0.92"/>
+        <path d="M14 11 Q20 4 26 6 Q22 10 14 11Z" fill="#a07840" opacity="0.88"/>
+        <ellipse cx="14" cy="12" rx="5" ry="3.5" fill="#8b5e28"/>
+        <ellipse cx="14" cy="13" rx="3" ry="2"   fill="#6a4018"/>
+        <circle  cx="12" cy="11" r="1.5" fill="#1a0e04"/>
+        <circle  cx="12.4" cy="10.6" r="0.5" fill="white"/>
+        <path d="M10 13 Q12 14.5 14 13" stroke="#c8a060" stroke-width="0.9" fill="none" stroke-linecap="round"/>
+        <path d="M11 9 Q12 7 13 9" stroke="#e8c070" stroke-width="0.8" fill="none"/>
+        <path d="M14 12 L10 18 Q12 17 14 16 Q16 17 18 18 L14 12Z" fill="#7a4820" opacity="0.85"/>
+      </svg>
+    </div>
 
   </div>
+  <div class="tree-svg-wrap tree1" aria-hidden="true">
+    <svg width="120" height="220" viewBox="0 0 120 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M54 218 Q40 212 32 218" stroke="#4a2c08" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M66 218 Q80 212 88 218" stroke="#4a2c08" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M52 218 Q42 205 36 195" stroke="#4a2c08" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M68 218 Q78 205 84 195" stroke="#4a2c08" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <rect x="48" y="148" width="24" height="72" rx="5" fill="#7a4218"/>
+      <rect x="52" y="154" width="5"  height="58" rx="2" fill="rgba(0,0,0,0.2)"/>
+      <rect x="60" y="162" width="3"  height="44" rx="1" fill="rgba(255,255,255,0.07)"/>
+      <rect x="65" y="168" width="4"  height="36" rx="2" fill="rgba(0,0,0,0.12)"/>
+      <ellipse cx="60" cy="140" rx="52" ry="36" fill="#1a4008"/>
+      <path d="M20 148 Q10 120 28 108" stroke="#143208" stroke-width="2" fill="none" opacity="0.4"/>
+      <path d="M100 148 Q110 120 92 108" stroke="#143208" stroke-width="2" fill="none" opacity="0.4"/>
+      <ellipse cx="60" cy="106" rx="44" ry="34" fill="#1e5010"/>
+      <ellipse cx="60" cy="76"  rx="34" ry="30" fill="#246018"/>
+      <ellipse cx="60" cy="50"  rx="22" ry="26" fill="#2a7020"/>
+      <ellipse cx="50" cy="42"  rx="9"  ry="7"  fill="rgba(255,255,255,0.07)"/>
+      <circle cx="38" cy="118" r="4"   fill="#c8e048" opacity="0.35"/>
+      <circle cx="80" cy="112" r="3"   fill="#c8e048" opacity="0.3"/>
+      <circle cx="52" cy="130" r="3"   fill="#c8e048" opacity="0.28"/>
+      <circle cx="72" cy="125" r="2.5" fill="#c8e048" opacity="0.3"/>
+      <circle cx="40" cy="95"  r="3.5" fill="#e53935" opacity="0.72"/>
+      <circle cx="76" cy="88"  r="3"   fill="#e53935" opacity="0.68"/>
+      <circle cx="55" cy="102" r="2.5" fill="#e53935" opacity="0.65"/>
+    </svg>
+  </div>
 
+  <div class="tree-svg-wrap tree2" aria-hidden="true">
+    <svg width="100" height="195" viewBox="0 0 100 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M44 193 Q32 187 24 193" stroke="#5a3210" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M56 193 Q68 187 76 193" stroke="#5a3210" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <path d="M43 193 Q34 180 28 170" stroke="#5a3210" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M57 193 Q66 180 72 170" stroke="#5a3210" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <rect x="40" y="130" width="20" height="65" rx="5" fill="#8a4820"/>
+      <rect x="44" y="136" width="4"  height="52" rx="2" fill="rgba(0,0,0,0.18)"/>
+      <rect x="50" y="144" width="3"  height="38" rx="1" fill="rgba(255,255,255,0.07)"/>
+      <ellipse cx="50" cy="122" rx="46" ry="32" fill="#1c4a0a"/>
+      <ellipse cx="50" cy="92"  rx="38" ry="30" fill="#225510"/>
+      <ellipse cx="50" cy="65"  rx="28" ry="27" fill="#286018"/>
+      <ellipse cx="50" cy="40"  rx="18" ry="22" fill="#2e6e20"/>
+      <ellipse cx="42" cy="33"  rx="7"  ry="6"  fill="rgba(255,255,255,0.07)"/>
+      <circle cx="30" cy="104" r="3.5" fill="#a8d040" opacity="0.32"/>
+      <circle cx="68" cy="98"  r="3"   fill="#a8d040" opacity="0.28"/>
+      <circle cx="44" cy="115" r="2.5" fill="#a8d040" opacity="0.3"/>
+      <circle cx="28" cy="82"  r="3"   fill="#ffd54f" opacity="0.72"/>
+      <circle cx="68" cy="76"  r="2.5" fill="#ffd54f" opacity="0.68"/>
+      <circle cx="46" cy="90"  r="2"   fill="#ffd54f" opacity="0.65"/>
+      <circle cx="55" cy="102" r="2.5" fill="#ffd54f" opacity="0.6"/>
+    </svg>
+  </div>
 
   <div class="stage" aria-live="polite">
-
 
     <div class="screen" id="screen-1" data-visible="true" role="region" aria-label="Pantalla principal">
       <div class="card card-main-rainy show" id="card-main">
@@ -280,7 +387,6 @@
       </div>
     </div>
 
-   
     <div class="screen" id="screen-2" data-visible="false" role="region" aria-label="Abrir sobre">
       <div class="card card-envelope-rainy" id="card-envelope">
 
@@ -301,12 +407,12 @@
         <div style="height:16px;"></div>
         <div class="sub" style="font-weight:600; color:#5a6e80;">¡ábreme!</div>
 
-        <button class="btn btn-rainy" id="open-envelope" style="margin-top:18px;">Abrir</button>
+        <button class="btn btn-rainy" id="open-envelope" style="margin-top:18px;">.</button>
 
       </div>
     </div>
 
-
+   
     <div class="screen" id="screen-3" data-visible="false" role="region" aria-label="Carta">
       <div class="card card-letter-screen" style="padding:20px 24px;">
         <div class="letter" id="letter">
@@ -357,7 +463,7 @@
              día me preguntaran si volvería a conocerte… sin pensarlo repetiría todo una y mil veces. Porque
              vale la pena.</p>
 
-          <p>No sé qué más decir sin sonar cursi JAJA, pero de verdad tqm. Gracias por existir y por dejarme
+          <p>No sé qué más decir sin sonar cursi jeje, pero de verdad tqm. Gracias por existir y por dejarme
              formar parte, aunque sea un poquito, de tus días.</p>
 
           <p>Sin nada más que agregar, te mando un abrazo enorme.</p>
@@ -365,29 +471,31 @@
           <div class="letter-divider"></div>
           <div class="signature-block">
             <div class="signature-label">Con mucho cariño,</div>
-            <div class="signature">samuel 🤍</div>
+            <div class="signature">samuel. </div>
           </div>
 
         </div>
 
         <div style="height:14px;"></div>
         <button class="btn" id="back-home"
-                style="background:linear-gradient(135deg,#8a9eb0,#aabccc,#c0cfd8);">← Volver</button>
+                style="background:linear-gradient(135deg,#8a9eb0,#aabccc,#c0cfd8);">←</button>
 
       </div>
     </div>
 
   </div>
 
+
   <audio id="bg-music" src="./Music/Vacations.mp3" preload="auto" playsinline></audio>
   <div id="play-overlay" aria-hidden="true">
     <button id="manual-play">🔊 Reproducir música</button>
   </div>
-
+ 
   <script src="./Js/Rain.js"     defer></script>
   <script src="./Js/Music.js"    defer></script>
   <script src="./Js/App.js"      defer></script>
   <script src="./Js/Switcher.js" defer></script>
+  <script src="./Js/Lyrics.js"   defer></script>
 
 </body>
 </html>

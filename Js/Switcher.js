@@ -10,7 +10,7 @@
     { id: 'night',  label: '',    icon: '🌙'  }
   ];
 
-  const DEFAULT = 'rain';
+  const DEFAULT = 'night';
   let current = THEMES.findIndex(t => t.id === DEFAULT);
 
   const STYLE = `

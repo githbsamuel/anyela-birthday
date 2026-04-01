@@ -1,0 +1,152 @@
+
+.grass-blade {
+  position: absolute;
+  bottom: 0;
+  border-radius: 60% 60% 0 0 / 80% 80% 0 0;
+  animation: grassSway ease-in-out infinite;
+  transform-origin: bottom center;
+}
+.grass-blade.g-dark  { background: #2e5228; }
+.grass-blade.g-mid   { background: #3a6040; }
+.grass-blade.g-light { background: #4e7a50; }
+.grass-blade.g-pale  { background: #5c8a5a; }
+@keyframes grassSway {
+  0%,100% { transform: rotate(-5deg) scaleX(1); }
+  50%      { transform: rotate(5deg)  scaleX(0.95); }
+}
+
+.tree-svg-wrap {
+  position: fixed;
+  bottom: 0;         
+  z-index: 6;
+  animation: treeSway 7s ease-in-out infinite;
+  transform-origin: bottom center;
+  pointer-events: none;
+}
+.tree-svg-wrap.tree1 { left: 3%; }
+.tree-svg-wrap.tree2 { right: 3%; animation-delay: -3.5s; }
+@keyframes treeSway {
+  0%,100% { transform: rotate(-0.8deg); }
+  50%      { transform: rotate(0.8deg); }
+}
+
+
+.picnic-wrap {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  width: 120px;
+}
+
+
+.stick-person {
+  position: absolute;
+  bottom: 10px;
+  z-index: 5;
+}
+.stick-person.boy  { left: 34%; }
+.stick-person.girl { left: 45%; }
+
+.stick-person.boy  { animation: personWalk 1.8s ease-in-out infinite; }
+.stick-person.girl { animation: personWalk 2.1s ease-in-out infinite reverse; animation-delay: -0.4s; }
+@keyframes personWalk {
+  0%,100% { transform: rotate(-2deg) translateY(0); }
+  25%      { transform: rotate(1.5deg) translateY(-2px); }
+  50%      { transform: rotate(-2deg) translateY(0); }
+  75%      { transform: rotate(1.5deg) translateY(-2px); }
+}
+
+
+.boy-arm-l { animation: boyArmL 1.8s ease-in-out infinite; transform-origin: 50% 0; }
+.boy-arm-r { animation: boyArmR 1.8s ease-in-out infinite; transform-origin: 50% 0; }
+@keyframes boyArmL { 0%,100%{transform:rotate(-30deg)} 50%{transform:rotate(20deg)} }
+@keyframes boyArmR { 0%,100%{transform:rotate(30deg)}  50%{transform:rotate(-20deg)} }
+.boy-leg-l { animation: boyLegL 1.8s ease-in-out infinite; transform-origin: 50% 0; }
+.boy-leg-r { animation: boyLegR 1.8s ease-in-out infinite; transform-origin: 50% 0; }
+@keyframes boyLegL { 0%,100%{transform:rotate(-22deg)} 50%{transform:rotate(18deg)} }
+@keyframes boyLegR { 0%,100%{transform:rotate(22deg)}  50%{transform:rotate(-18deg)} }
+
+.girl-arm-l { animation: girlArmL 2.1s ease-in-out infinite; transform-origin: 50% 0; }
+.girl-arm-r { animation: girlArmR 2.1s ease-in-out infinite; transform-origin: 50% 0; }
+@keyframes girlArmL { 0%,100%{transform:rotate(26deg)}  50%{transform:rotate(-26deg)} }
+@keyframes girlArmR { 0%,100%{transform:rotate(-26deg)} 50%{transform:rotate(26deg)} }
+.girl-leg-l { animation: girlLegL 2.1s ease-in-out infinite; transform-origin: 50% 0; }
+.girl-leg-r { animation: girlLegR 2.1s ease-in-out infinite; transform-origin: 50% 0; }
+@keyframes girlLegL { 0%,100%{transform:rotate(20deg)}  50%{transform:rotate(-20deg)} }
+@keyframes girlLegR { 0%,100%{transform:rotate(-20deg)} 50%{transform:rotate(20deg)} }
+
+.flower-hand {
+  animation: flowerSway 1.8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+@keyframes flowerSway {
+  0%,100% { transform: rotate(-12deg) translateY(0); }
+  50%      { transform: rotate(6deg)  translateY(-2px); }
+}
+
+
+.butterfly-wrap {
+  position: absolute;
+  bottom: 50px; left: 55%;
+  animation: butterflyPath 8s ease-in-out infinite;
+  z-index: 5;
+}
+@keyframes butterflyPath {
+  0%  { transform: translate(0,0)      rotate(0deg); }
+  15% { transform: translate(20px,-28px) rotate(9deg); }
+  30% { transform: translate(38px,-10px) rotate(-6deg); }
+  45% { transform: translate(25px,-36px) rotate(13deg); }
+  60% { transform: translate(10px,-18px) rotate(-9deg); }
+  75% { transform: translate(32px,-32px) rotate(6deg); }
+  90% { transform: translate(14px,-8px)  rotate(-4deg); }
+  100%{ transform: translate(0,0)      rotate(0deg); }
+}
+.butterfly-svg {
+  animation: butterflyFlap 0.2s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+@keyframes butterflyFlap {
+  0%  { transform: scaleY(1) scaleX(1); }
+  100%{ transform: scaleY(0.35) scaleX(1.18); }
+}
+
+
+.bird-wrap {
+  position: absolute;
+  bottom: 65px; right: 30%;
+  animation: birdPath 10s ease-in-out infinite;
+  z-index: 5;
+}
+@keyframes birdPath {
+  0%  { transform: translate(0,0); }
+  20% { transform: translate(-35px,-30px); }
+  40% { transform: translate(-18px,-12px); }
+  60% { transform: translate(-48px,-42px); }
+  80% { transform: translate(-24px,-18px); }
+  100%{ transform: translate(0,0); }
+}
+.bird-svg {
+  animation: birdFlap 0.32s ease-in-out infinite alternate;
+  transform-origin: center;
+  filter: saturate(0.75);
+}
+@keyframes birdFlap {
+  0%  { transform: scaleY(1); }
+  100%{ transform: scaleY(0.45) translateY(-3px); }
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 900px) {
+  .tree-svg-wrap.tree1 { left: 0%; }
+  .tree-svg-wrap.tree2 { right: 0%; }
+}
+@media (max-width: 600px) {
+  .tree-svg-wrap { transform: scale(0.7); transform-origin: bottom center; }
+  .stick-person.boy  { left: 30%; }
+  .stick-person.girl { left: 42%; }
+}
+@media (max-width: 400px) {
+  .tree-svg-wrap { display: none; }
+}
