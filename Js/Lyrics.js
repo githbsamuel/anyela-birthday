@@ -3,13 +3,13 @@
 
   const LINES = [
 
-    { t: 0.0, text: " ⭐ " },
+    { t: 0.0, text: ":D" },
     { t: 4.0, text: 'tqm' },
-    { t: 8.0, text: 'tqm' },
+    { t: 8.0, text: ':3' },
     { t: 14.0, text: 'tqm' },
-    { t: 17.0, text: 'tqm' },
+    { t: 17.0, text: ':v' },
     { t: 21.0,  text: 'tqm' },
-    { t: 22.0,  text: 'tqm' },
+    { t: 22.0,  text: ':D' },
     
 
     { t: 27.0, text: 'Rise with the morning' },
@@ -38,21 +38,22 @@
     { t: 176.0, text: "You ll always be next to me" },
     { t: 182.0, text: "You'll always be next to me" },
 
-    { t: 188.0, text: "do better" },
-    { t: 190.0, text: "and" },
-    { t: 194.0, text: "do better" },
+    { t: 188.0, text: ":D" },
+    { t: 190.0, text: ":v" },
+    { t: 194.0, text: ":3" },
+    { t: 198.0, text: ":D" },
 
   ];
 
  
   const LYRICS = [
-    { t: 0.0, text: " ⭐ " },
+    { t: 0.0, text: ":D" },
     { t: 4.0, text: 'tqm' },
-    { t: 8.0, text: 'tqm' },
+    { t: 8.0, text: ':3' },
     { t: 14.0, text: 'tqm' },
-    { t: 17.0, text: 'tqm' },
+    { t: 17.0, text: ':v' },
     { t: 21.0,  text: 'tqm' },
-    { t: 22.0,  text: 'tqm' },
+    { t: 22.0,  text: ':D' },
     
 
     { t: 27.0, text: 'Rise with the morning' },
@@ -81,9 +82,10 @@
     { t: 176.0, text: "You ll always be next to me" },
     { t: 182.0, text: "You'll always be next to me" },
 
-    { t: 188.0, text: "do better" },
-    { t: 190.0, text: "and" },
-    { t: 194.0, text: "do better" },
+    { t: 188.0, text: ":D" },
+    { t: 190.0, text: ":v" },
+    { t: 194.0, text: ":3" },
+    { t: 198.0, text: ":D" },
 
   ];
 

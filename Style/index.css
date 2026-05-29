@@ -243,6 +243,31 @@ body {
 
 .hair { position:absolute; top:-8px; left:50%; transform:translateX(-50%); }
 .hair.boy-hair  { width:25px; height:10px; background:#271f1a; border-radius:50% 50% 0 0; }
+
+/* Lentes del niño */
+.glasses {
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.lens {
+  width: 7px;
+  height: 5px;
+  border: 1.5px solid #222;
+  border-radius: 2px;
+  background: rgba(180,220,255,0.35);
+}
+.lens-bridge {
+  width: 3px;
+  height: 1.5px;
+  background: #222;
+  align-self: center;
+  margin-top: -1px;
+}
 .hair.girl-hair { width:30px; height:20px; background:#2c1810; border-radius:50% 50% 20% 20%; }
 .hair.girl-hair::before {
   content:''; position:absolute;
