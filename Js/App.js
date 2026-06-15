@@ -2,7 +2,6 @@
 (function () {
   'use strict';
 
-
   const s1           = document.getElementById('screen-1');
   const s2           = document.getElementById('screen-2');
   const s3           = document.getElementById('screen-3');
@@ -12,7 +11,6 @@
   const envelope     = document.getElementById('envelope');
   const envFlap      = document.getElementById('env-flap');
   const letter       = document.getElementById('letter');
-
 
   function showScreen(target) {
     [s1, s2, s3].forEach(s => { s.dataset.visible = 'false'; });
@@ -35,7 +33,6 @@
     }, 220);
   });
 
-
   openEnvBtn.addEventListener('click', () => {
     if (window.Music) window.Music.tryStart();
     envFlap.style.transform  = 'rotateX(-180deg) translateY(-6px)';
@@ -45,6 +42,12 @@
     setTimeout(() => {
       letter.classList.add('revealed');
       showScreen(s3);
+
+      // Máquina de escribir — sin opción de saltar
+      setTimeout(() => {
+        if (window.Typewriter) window.Typewriter.start();
+      }, 350);
+
       setTimeout(() => {
         envFlap.style.transform  = '';
         envelope.style.transform = '';
@@ -53,10 +56,10 @@
   });
 
   backHomeBtn.addEventListener('click', () => {
+    if (window.Typewriter) window.Typewriter.restore();
     letter.classList.remove('revealed');
     showScreen(s1);
   });
-
 
   envelope.addEventListener('click', () => openEnvBtn.click());
 

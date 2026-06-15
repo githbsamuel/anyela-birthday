@@ -183,6 +183,10 @@
     const moon  = document.querySelector('.moon-el');
     if (stars) stars.style.display = isNight ? '' : 'none';
     if (moon)  moon.style.display  = isNight ? '' : 'none';
+
+    // ── Sonido ambiental ─────────────────────────────────────────────────
+    if (window.Ambient) window.Ambient.setTheme(id);
+    // ────────────────────────────────────────────────────────────────────
   }
 
 
@@ -241,6 +245,8 @@
     requestAnimationFrame(() => requestAnimationFrame(() => {
       apply(current, false);
       setupInteraction();
+      // Inicializar Ambient con el tema por defecto (se activa tras primer clic)
+      if (window.Ambient) window.Ambient.init(THEMES[current].id);
     }));
   }
 
