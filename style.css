@@ -622,7 +622,7 @@
   }
   
   .letter::before{
-    content: '💕';
+    content: 'jeje';
     position: absolute;
     top: 15px;
     right: 20px;
